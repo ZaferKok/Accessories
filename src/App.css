@@ -1,38 +1,227 @@
-.App {
+html {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+body {
+  text-align: center !important;
+  margin: auto !important;
+  min-width: 80rem;
+}
+
+.container {
+  margin-top: 1rem;
+  margin: 0px;
+  padding: 0px;
+  background-color: none;
+}
+
+.forNavbar {
+  background-color: none;
+}
+
+.navbarBox {
   text-align: center;
+  height: 5rem;
+  font-family: 'Beau Rivage';
+  font-style: oblique;
+  box-shadow: 0px 5px 30px #ccc;
+  border-radius: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#lnk {
+  font-weight: lighter;
+  color: brown;
+  font-size: 30px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#lnk:hover {
+  font-weight: lighter;
+  color: blue;
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#lnk:visited {
+  color: red;
 }
 
-.App-link {
-  color: #61dafb;
+#lnk:active {
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  text-align: center;
+  min-width: 80rem;
+  vertical-align: text-top;
+}
+
+.mainbox {
+  background-color: white;
+}
+
+header {
+  padding: 3rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+h1 {
+  font-family: 'Beau Rivage';
+  min-width: 80rem;
+  padding: 1rem;
+  color: brown;
+  text-shadow: 0px -3px 8px orangered;
+}
+
+#homPic {
+  width: 500px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+#homeSubtitle {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#homPic:hover {
+  width: 510px;
+  height: 355px;
+}
+
+#itemTitle {
+  color: brown;
+  text-shadow: 0px -3px 8px orangered;
+}
+
+#miniPicsBox {
+  height: 15rem;
+}
+
+#miniPics {
+  width: 10rem;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px #ccc;
+}
+#miniCartPics {
+  width: 5rem;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px #ccc;
+}
+
+#miniPics:hover {
+  width: 11rem;
+}
+
+#bigPic {
+  width: 100%;
+  border-radius: 15px;
+  border: solid brown 2px;
+  box-shadow: 0px 5px 50px #ccc;
+}
+
+#productSubtitle {
+  color: brown;
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-bottom: 8%;
+}
+#productCartTitle {
+  color: brown;
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Beau Rivage';
+  margin-top: 4%;
+}
+#productPrice {
+  color: blueviolet;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  font-weight: bolder;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#productCartPrice {
+  color: blueviolet;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  font-weight: bolder;
+}
+#likeButton {
+  color: rgb(253, 177, 177);
+  font-size: 50px;
+  font-family: 'Beau Rivage';
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 91%;
+  background-color: white;
+  border: none;
+}
+#likeButton:hover {
+  color: red;
+}
+#addCartButton {
+  color: brown;
+  width: 300px;
+  height: 50px;
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgba(248, 248, 39, 0.712);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px #ccc;
+}
+#addCartButton:hover {
+  border: solid brown 2px;
+}
+#productBackButton {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: brown;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-right: 45%;
+  margin-bottom: 3%;
+  box-shadow: 0px 5px 30px #ccc;
+}
+#orderButton {
+  color: brown;
+  text-align: center;
+  width: 60%;
+  height: 50px;
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-top: 3%;
+  margin-left: 20%;
+  background-color: rgba(248, 248, 39, 0.712);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px #ccc;
+}
+#clientInfo1 {
+  color: red;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+#clientInfo2 {
+  color: red;
+  font-size: xx-large;
+  font-family: 'Beau Rivage';
+  margin-top: 1%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
