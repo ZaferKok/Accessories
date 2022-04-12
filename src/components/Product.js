@@ -17,12 +17,12 @@ function Product(props) {
                     <div className='row'>
                         <div className='col'>
                             <img id='bigPic' src={props.detailselection.Pic} />
-                            <button id='likeButton' >{"\u2764"}</button>
+                            <button id='likeButton' onClick={() => {console.log(props.favorite); props.addToFavorite(props.detailselection) }}>{"\u2764"}</button>
                         </div>
                         <div className='col'>
                             <p id='productSubtitle'>{props.detailselection.Title}</p>
                             <p id='productPrice'>Price: {props.detailselection.Price} €</p>
-                            <button id='addCartButton' onClick={() => {console.log(props.cart); props.addToCart(props.detailselection)}}>ADD TO CART</button>
+                            <button id='addCartButton' onClick={() => {console.log(props.cart); props.addToCart(props.detailselection) }}>ADD TO CART</button>
                         </div>
                     </div>
                 </div>

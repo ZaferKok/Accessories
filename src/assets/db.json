@@ -39,61 +39,61 @@
         "maincat": "0",
         "subcat": "0",
         "Title": "ELAN UNITY BRACELET",
-        "Jahr": 1981,
+        "Quantity": 1,
         "Pic": "./images/bracelet01.jpg",
-        "Price": 99.99
+        "Price": 169.99
       },
       {
         "id": 2,
         "maincat": "0",
         "subcat": "0",
         "Title": "CLASSIC VALENTINE BRACELET",
-        "Jahr": 1980,
+        "Quantity": 1,
         "Pic": "./images/bracelet02.jpg",
-        "Price": 99.99
+        "Price": 159.99
       },
       {
         "id": 3,
         "maincat": "0",
         "subcat": "0",
         "Title": "EMALIE SLIM BRACELET",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/bracelet03.jpg",
-        "Price": 99.99
+        "Price": 179.99
       },
       {
         "id": 4,
         "maincat": "0",
         "subcat": "1",
         "Title": "ELEVATION NECKLACE",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/necklace01.jpg",
-        "Price": 99.99
+        "Price": 307.99
       },
       {
         "id": 5,
         "maincat": "0",
         "subcat": "1",
         "Title": "ELAN LUMINE NECKLACE",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/necklace02.jpg",
-        "Price": 99.99
+        "Price": 332.99
       },
       {
         "id": 6,
         "maincat": "0",
         "subcat": "1",
         "Title": "ASPIRATION NECKLACE",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/necklace03.jpg",
-        "Price": 99.99
+        "Price": 314.99
       },
       {
         "id": 7,
         "maincat": "0",
         "subcat": "2",
         "Title": "ASPIRATION EARRINGS",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/earring01.jpg",
         "Price": 99.99
       },
@@ -102,72 +102,72 @@
         "maincat": "0",
         "subcat": "2",
         "Title": "EMALIE EARRINGS",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/earring02.jpg",
-        "Price": 99.99
+        "Price": 88.99
       },
       {
         "id": 9,
         "maincat": "0",
         "subcat": "2",
         "Title": "ELAN EARRINGS",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/earring03.jpg",
-        "Price": 99.99
+        "Price": 85.99
       },
       {
         "id": 10,
         "maincat": "1",
         "subcat": "0",
         "Title": "SORPASSO CHRONOGRAPH WATCH",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/watch01.jpg",
-        "Price": 99.99
+        "Price": 209.99
       },
       {
         "id": 11,
         "maincat": "1",
         "subcat": "0",
         "Title": "VENTURE LIMITED WATCH",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/watch02.jpg",
-        "Price": 99.99
+        "Price": 255.99
       },
       {
         "id": 12,
         "maincat": "1",
         "subcat": "0",
         "Title": "VIAGGIO AUTOMATIC WATCH",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/watch03.jpg",
-        "Price": 99.99
+        "Price": 399.99
       },
       {
         "id": 13,
         "maincat": "1",
         "subcat": "1",
         "Title": "BELLROY HIDE WALLET",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/wallet01.jpg",
-        "Price": 99.99
+        "Price": 37.99
       },
       {
         "id": 14,
         "maincat": "1",
         "subcat": "1",
         "Title": "DONBOLSO WALLET",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/wallet02.jpg",
-        "Price": 99.99
+        "Price": 32.99
       },
       {
         "id": 15,
         "maincat": "1",
         "subcat": "1",
         "Title": "NORDSTORM WALLET",
-        "Jahr": 1979,
+        "Quantity": 1,
         "Pic": "./images/wallet03.jpg",
-        "Price": 99.99
+        "Price": 37.99
       }
     ]
   }

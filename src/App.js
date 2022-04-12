@@ -35,13 +35,29 @@ function App(props) {
       cartString = JSON.stringify(props.cart)
       localStorage.setItem("cart", cartString)
     }
-  }, [])
+    //Favorite
+    let favoriteString = localStorage.getItem("favorite")
+    if (favoriteString != null) {
+      const favoriteArray = JSON.parse(favoriteString)
+      props.setFavorite(favoriteArray)
+    } else {
+      favoriteString = JSON.stringify(props.favorite)
+      localStorage.setItem("favorite", favoriteString)
+    }
 
-  // After Update [something]
+  }, [])
+  // After Update [cart]
   useEffect(() => {
     const cartString = JSON.stringify(props.cart)
     localStorage.setItem("cart", cartString)
   }, [props.cart])
+
+  // After Update [favorite]
+  useEffect(() => {
+    const favoriteString = JSON.stringify(props.favorite)
+    localStorage.setItem("favorite", favoriteString)
+  }, [props.favorite])
+
 
   return (
     <div className='mainbox'>

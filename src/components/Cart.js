@@ -8,17 +8,30 @@ function Cart(props) {
 
     const navigate = useNavigate()
 
+    // function totalAmount(price){
+    //     let summe = 0
+    //     for(int i= ){
+
+    //     }
+    //     return 
+
+    // }
+
     return (
         <div>
-            <h4>Product Details</h4><br></br><br></br><br></br>
-            <button id='productBackButton' onClick={() => { navigate(-1) }}>{"\u21DA"}Back</button>
+            <h4>Shopping Summary</h4><br></br><br></br><br></br>
+            <button id='cartBackButton' onClick={() => { navigate(-1) }}>{"\u21DA"}Back</button>
             {
                 props.cart.map((value, index) => {
                     return (
                         <div className='container'>
-                            <div className='row'>
+                            <div className='row rowCart'>
                                 <div className='col'>
-                                    <img id='miniCartPics' src={value.Pic} />
+                                    <div onClick={() => {
+                                        props.setDetails(value)
+                                        navigate("/product")
+                                    }}><img id='miniCartPics' src={value.Pic} />
+                                    </div>
                                 </div>
                                 <div className='col'>
                                     <p id='productCartTitle'>{value.Title}</p>
@@ -26,11 +39,34 @@ function Cart(props) {
                                 <div className='col'>
                                     <p id='productCartPrice'>{value.Price} €</p>
                                 </div>
+                                <div className='col'>
+                                    <button id='counter'>-</button>
+                                    <button id='counter'>({props.cart[0].Quantity})</button>
+                                    <button id='counter' >+</button>
+                                    {/* onClick={()=> props.plusCounter(value)} */}
+                                </div>
+                                <div className='col'>
+                                    <button id='delButton' onClick={() => { props.removeFromCart(index) }}>DELETE</button>
+                                </div>
                             </div>
                         </div>
                     )
                 })
             }
+            <div id='clientInfo1' className='row'>
+                <div className='col'>
+                    {props.cart.length > 0 &&
+                        <label >Total amount: <br></br>
+                            <p id='total'>
+                                {
+                                    (props.cart.map(value => value.Price).reduce((prev, next) => prev + next)).toFixed(2)
+                                }
+                                €
+                            </p>
+                        </label>}
+                    <p></p>
+                </div>
+            </div>
             <div id='clientInfo1' className='row'>
                 <div className='col'>
                     <div><label>Credit Card Number:</label></div>
@@ -54,9 +90,6 @@ function Cart(props) {
             <div className='row'>
                 <button id='orderButton' type='submit'>ORDER</button>
             </div>
-            {
-
-            }
         </div>
     );
 }

@@ -62,10 +62,10 @@ const mapDispatchToProps = (dispatch) => {
             })
         },
 
-        addToCart: (produkt) => {
+        addToCart: (product) => {
             dispatch({
                 type: "ADD_TO_CART",
-                payload: produkt
+                payload: product
             })
         },
 
@@ -76,24 +76,64 @@ const mapDispatchToProps = (dispatch) => {
             })
         },
 
-
-
-
-
-
-
-
-
-
-
-
-
         removeFromCart: (index) => {
             dispatch({
                 type: "REMOVE_FROM_CART",
                 payload: index
             })
         },
+
+        addToFavorite: (product) => {
+            dispatch({
+                type: "ADD_TO_FAVORITE",
+                payload: product
+            })
+        },
+
+        setFavorite: (cart) => {
+            dispatch({
+                type: "SET_FAVORITE",
+                payload: cart
+            })
+        },
+
+        removeFromFavorite: (index) => {
+            dispatch({
+                type: "REMOVE_FROM_FAVORITE",
+                payload: index
+            })
+        },
+
+        setLoginStatus: (bool) => {
+            dispatch({
+                type: "SET_LOGIN_STATUS",
+                payload: bool
+            })
+        },
+
+        // setUsers: (user) => {
+        //     console.log(user);
+        //     dispatch({
+        //         type: "SET_USERS",
+        //         payload: user
+        //     })
+        // },
+        // plusCounter: (value) => {
+        //     dispatch({
+        //         type: "PLUS_COUNTER",
+        //         payload: value
+        //     })
+        // },
+
+
+
+
+
+
+
+
+
+
         setCategories: (formular) => {
             dispatch({
                 type: "SET_CATEGORIES",
@@ -104,12 +144,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({
                 type: "CHANGE_CATEGORY",
                 payload: event
-            })
-        },
-        setDetails: (produkt) => {
-            dispatch({
-                type: "SET_DETAILS",
-                payload: produkt
             })
         },
         setLoginStatus: (bool) => {
