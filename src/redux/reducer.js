@@ -1,5 +1,3 @@
-import { isDocument } from "@testing-library/user-event/dist/utils"
-
 const initState = {
     maincats: [],
     subcats: [],
@@ -13,7 +11,13 @@ const initState = {
     detailselection: [],
     users: [],
     loginStatus: false,
-    counter: [{ id: "", count: 0 }]
+    counter: [{ id: "", count: 0 }],
+    account:{
+        creditCard: "",
+        name: "",
+        address: "",
+        telefon: ""
+    }
 }
 
 const reducer = (state = initState, action) => {
@@ -51,19 +55,16 @@ const reducer = (state = initState, action) => {
                 ...state,
                 detailselection: action.payload
             }
-
         case "ADD_TO_CART":
             return {
                 ...state,
                 cart: [...state.cart, action.payload]
             }
-
         case "SET_CART":
             return {
                 ...state,
                 cart: action.payload
             }
-
         case "REMOVE_FROM_CART":
             const newArray1 = state.cart.filter((value, index) => {
                 return action.payload != index
@@ -72,19 +73,16 @@ const reducer = (state = initState, action) => {
                 ...state,
                 cart: newArray1
             }
-
         case "ADD_TO_FAVORITE":
             return {
                 ...state,
                 favorite: [...state.favorite, action.payload]
             }
-
         case "SET_FAVORITE":
             return {
                 ...state,
                 favorite: action.payload
             }
-
         case "REMOVE_FROM_FAVORITE":
             const newArray3 = state.favorite.filter((value, index) => {
                 return action.payload != index
@@ -93,13 +91,11 @@ const reducer = (state = initState, action) => {
                 ...state,
                 favorite: newArray3
             }
-
         case "SET_LOGIN_STATUS":
             return {
                 ...state,
                 loginStatus: action.payload
             }
-
         case "PLUS_COUNTER":
             const newProduct1 = state.cart.find((product) => product.id === action.payload.id)
             if(newProduct1.Quantity < 10) newProduct1.Quantity++
@@ -107,7 +103,6 @@ const reducer = (state = initState, action) => {
                 ...state,
                 cart: [...state.cart]
             }
-
         case "MINUS_COUNTER":
             const newProduct2 = state.cart.find((product) => product.id === action.payload.id)
             if(newProduct2.Quantity != 1) newProduct2.Quantity--
@@ -116,7 +111,11 @@ const reducer = (state = initState, action) => {
                 ...state,
                 cart: [...state.cart]
             }
-
+        // case "SET_ACCOUNT":
+        //     return {
+        //         ...state,
+        //         account: action.payload
+        //     }    
         default:
             return state
     }

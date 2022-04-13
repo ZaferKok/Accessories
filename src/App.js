@@ -7,10 +7,9 @@ import Accessories from './components/Accessories';
 import Cart from './components/Cart';
 import User from './components/User';
 import Favorite from './components/Favorite';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import bootstrap from 'bootstrap';
 import Navi from './components/Navi';
 import Home from './components/Home';
+import Order from './components/Order';
 import './App.css';
 import Product from './components/Product';
 
@@ -24,7 +23,11 @@ function App(props) {
 
   const [loginForm, setLoginForm] = useState({
     username: "",
-    password: ""
+    password: "",
+    credit: "",
+    name: "",
+    address: "",
+    telefon: "",
   })
 
   // After Initialization
@@ -79,6 +82,7 @@ function App(props) {
           <Route path='/favorite' element={(<Favorite />)} />
           <Route path='/user' element={(<User loginForm={loginForm} setLoginForm={setLoginForm} />)} />
           <Route path='/product' element={(<Product />)} />
+          <Route path="/order" element={(<Order loginForm={loginForm} />)} />
         </Routes>
       </main>
     </div>

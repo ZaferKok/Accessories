@@ -309,8 +309,6 @@ h1 {
 #loginHeader {
   margin-bottom: 2rem;
   color: brown;
-
-
 }
 #login{
   margin-right: 2rem;
@@ -335,10 +333,29 @@ h1 {
   background-color: brown;
   box-shadow: 0px 5px 30px rgb(201, 61, 61);
 }
+#saveButton {
+  width: 20rem;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: medium;
+  font-family: 'Arial';
+  margin-top: 2%;
+  margin-bottom: 3%;
+  margin-right: 2%;
+  background-color: rgb(42, 165, 52);
+  box-shadow: 0px 5px 30px rgb(66, 201, 61);
+}
 form{
   border: solid brown 1px;
   border-radius: 20px;
   padding-top: 3rem;
   width: 50rem;
-  margin-left: 30%;
+  margin-left: 34%;
+}
+#orderHeader{
+  margin-top: 5%;
+  color: rgb(0, 168, 0);
+  font-weight: bolder;
 }

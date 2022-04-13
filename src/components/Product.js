@@ -16,7 +16,7 @@ function Product(props) {
                 <div className='container'>
                     <div className='row'>
                         <div className='col'>
-                            <img id='bigPic' src={props.detailselection.Pic} />
+                            <img id='bigPic' src={props.detailselection.Pic} value={value.Pic}/>
                             <button id='likeButton' onClick={() => {console.log(props.favorite); props.addToFavorite(props.detailselection) }}>{"\u2764"}</button>
                         </div>
                         <div className='col'>

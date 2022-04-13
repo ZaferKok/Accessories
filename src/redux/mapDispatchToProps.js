@@ -14,6 +14,7 @@ const mapDispatchToProps = (dispatch) => {
                     })
             })
         },
+
         setSubCats: () => {
             dispatch(() => {
                 axios.get(`${BASE_URL}/subcats`)
@@ -25,6 +26,7 @@ const mapDispatchToProps = (dispatch) => {
                     })
             })
         },
+
         setItems: () => {
             dispatch(() => {
                 axios.get(`${BASE_URL}/items`)
@@ -36,6 +38,7 @@ const mapDispatchToProps = (dispatch) => {
                     })
             })
         },
+
         setUsers: () => {
             dispatch(() => {
                 axios.get(`${BASE_URL}/users`)
@@ -47,7 +50,7 @@ const mapDispatchToProps = (dispatch) => {
                     })
             })
         },
-        
+
         selectMainCat: (maincat) => {
             dispatch({
                 type: "SELECT_MAINCAT",
@@ -124,32 +127,12 @@ const mapDispatchToProps = (dispatch) => {
                 payload: value
             })
         },
-
-
-
-
-
-
-
-
-        setCategories: (formular) => {
-            dispatch({
-                type: "SET_CATEGORIES",
-                payload: formular
-            })
-        },
-        changeCategory: (event) => {
-            dispatch({
-                type: "CHANGE_CATEGORY",
-                payload: event
-            })
-        },
-        setLoginStatus: (bool) => {
-            dispatch({
-                type: "SET_LOGIN_STATUS",
-                payload: bool
-            })
-        }
+        // setAccount: (value) => {
+        //     dispatch({
+        //         type: "SET_ACCOUNT",
+        //         payload: value
+        //     })
+        // }
     }
 }
 

@@ -36,5 +36,4 @@ function Favorite(props) {
     );
 }
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(Favorite);

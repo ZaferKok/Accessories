@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import mapStateToProps from '../redux/mapStateToProps';
 import mapDispatchToProps from '../redux/mapDispatchToProps';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 
 
@@ -34,4 +34,5 @@ function Home(props) {
 
     );
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -21,7 +21,7 @@ function Cart(props) {
                                     <div onClick={() => {
                                         props.setDetails(value)
                                         navigate("/product")
-                                    }}><img id='miniCartPics' src={value.Pic} />
+                                    }}><img id='miniCartPics' src={value.Pic} alt={value.Pic}/>
                                     </div>
                                 </div>
                                 <div className='col'>
@@ -31,10 +31,9 @@ function Cart(props) {
                                     <p id='productCartPrice'>{(value.Price * value.Quantity).toFixed(2)} €</p>
                                 </div>
                                 <div className='col'>
-                                    <button id='counter' onClick={()=> props.minusCounter(value)}>-</button>
+                                    <button id='counter' onClick={() => props.minusCounter(value)}>-</button>
                                     <button id='counter'>({value.Quantity})</button>
-                                    <button id='counter' onClick={()=> props.plusCounter(value)}>+</button>
-                                    
+                                    <button id='counter' onClick={() => props.plusCounter(value)}>+</button>
                                 </div>
                                 <div className='col'>
                                     <button id='delButton' onClick={() => { props.removeFromCart(index) }}>DELETE</button>
@@ -58,32 +57,11 @@ function Cart(props) {
                     <p></p>
                 </div>
             </div>
-            <div id='clientInfo1' className='row'>
-                <div className='col'>
-                    <div><label>Credit Card Number:</label></div>
-                    <input type="text" required></input>
-                </div>
-                <div className='col'>
-                    <div><label>Firstname and Lastname:</label></div>
-                    <input type="text" required></input>
-                </div>
-            </div>
-            <div id='clientInfo2' className='row'>
-                <div className='col'>
-                    <div><label>Address:</label></div>
-                    <input type="text" required></input>
-                </div>
-                <div className='col'>
-                    <div><label>Phone number:</label></div>
-                    <input type="text" required></input>
-                </div>
-            </div>
             <div className='row'>
-                <button id='orderButton' type='submit'>ORDER</button>
+                <button id='orderButton' type='submit' onClick={() => props.loginStatus ? navigate("/order") : navigate("/user")}>ORDER</button>
             </div>
         </div>
     );
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
