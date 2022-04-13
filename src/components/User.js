@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom'
 
 function User(props) {
 
-    const [message, setMessage] = useState("");
+    // const [message, setMessage] = useState("");
 
     const navigate = useNavigate()
 
-    function errorMessage() {
-        setMessage(() => {
-            return "Invalid username or password!"
-        })
-    }
+    // function errorMessage() {
+    //     setMessage(() => {
+    //         return "Invalid username or password!"
+    //     })
+    // }
 
     function enterForm(event) {
         props.setLoginForm((currentState) => {
@@ -31,11 +31,11 @@ function User(props) {
                 value.password === props.loginForm.password
         })
         if (user) {
+            props.setMessage("")
             props.setLoginStatus(true)
         } else {
-            // props.setLoginStatus(false)
-            // props.setLoginForm({})
-            errorMessage()
+            props.setMessage("Invalid username or password!")
+            props.setLoginStatus(false)
         }
     }
 
@@ -80,28 +80,33 @@ function User(props) {
         :
         (<>
             <h3 id='loginHeader'>Please Login</h3>
-            <form>
-                <div>
-                    <label id='login'>USERNAME:</label>
-                    <input id='loginBox' type="text" name="username" value={props.loginForm.username} onChange={enterForm} required />
-                </div><br></br>
-                <div>
-                    <label id='login'> PASSWORD:</label>
-                    <input id='loginBox' type="password" name="password" value={props.loginForm.password} onChange={enterForm} required />
-                </div><br></br>
-                <div>
-                    {
+            <div id='loginMenu'>
+                <form onSubmit={(event) => event.preventDefault()}> {/* Otherwise error message not working  or you can make login button type BUTTON */}
+
+                    <div>
+                        <label id='login'>USERNAME:</label>
+                        <input id='loginBox' type="text" name="username" value={props.loginForm.username} onChange={enterForm} required />
+                    </div><br></br>
+                    <div>
+                        <label id='login'> PASSWORD:</label>
+                        <input id='loginBox' type="password" name="password" value={props.loginForm.password} onChange={enterForm} required />
+                    </div><br></br>
+                    <div>
+                        {/* {
                         props.loginStatus 
                         ?
                         <div></div>
                         :
                         <div>{message}</div>
-                    }
-                    <br>
-                    </br>
-                    <button id='logButton' type="submit" onClick={logIn}>LOGIN</button>
-                </div>
-            </form>
+                    } */}
+                        <h4 id='errorMessage'>{props.message}</h4>
+                        <br>
+                        </br>
+                        <button id='logButton' type="submit" onClick={logIn}>LOGIN</button>
+                    </div>
+
+                </form>
+            </div>
         </>)
 }
 

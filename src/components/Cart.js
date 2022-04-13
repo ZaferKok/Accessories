@@ -11,7 +11,9 @@ function Cart(props) {
     return (
         <div>
             <h4>Shopping Summary</h4><br></br><br></br><br></br>
-            <button id='cartBackButton' onClick={() => { navigate(-1) }}>{"\u21DA"}Back</button>
+            <div className='col-6'>
+                <button id='cartBackButton' onClick={() => { navigate(-1) }}>{"\u21DA"}Back</button>
+            </div><br />
             {
                 props.cart.map((value, index) => {
                     return (
@@ -21,7 +23,7 @@ function Cart(props) {
                                     <div onClick={() => {
                                         props.setDetails(value)
                                         navigate("/product")
-                                    }}><img id='miniCartPics' src={value.Pic} alt={value.Pic}/>
+                                    }}><img id='miniCartPics' src={value.Pic} alt={value.Pic} />
                                     </div>
                                 </div>
                                 <div className='col'>
@@ -46,19 +48,27 @@ function Cart(props) {
             <div id='clientInfo1' className='row'>
                 <div className='col'>
                     {props.cart.length > 0 &&
-                        <label >Total amount: <br></br>
-                            <p id='total'>
-                                {
-                                    (props.cart.map(value => (value.Price * value.Quantity)).reduce((prev, next) => prev + next)).toFixed(2)
-                                }
-                                €
-                            </p>
-                        </label>}
-                    <p></p>
+                        <>
+                            <label >Total amount: <br></br>
+                                <p id='total'>
+                                    {
+                                        (props.cart.map(value => (value.Price * value.Quantity)).reduce((prev, next) => prev + next)).toFixed(2)
+                                    }
+                                    €
+                                </p>
+                            </label>
+                            <div className='row' style={{ textAlign: "center" }}>
+                                <button id='orderButton' type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</button>
+                            </div>
+                        </>
+                    }
+                    {props.cart.length == 0 &&
+                        <>
+                            <h3 style={{ color: "blueviolet", fontWeight: 'bolder' }}>There is nothing here!</h3>
+                            <img src='./images/cart.jpg' alt='emoji' height='300px'></img>
+                        </>
+                    }
                 </div>
-            </div>
-            <div className='row'>
-                <button id='orderButton' type='submit' onClick={() => props.loginStatus ? navigate("/order") : navigate("/user")}>ORDER</button>
             </div>
         </div>
     );

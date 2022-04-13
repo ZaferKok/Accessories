@@ -15,9 +15,14 @@ body {
   padding: 0px;
   background-color: none;
 }
+.mainbox{
+  text-align: center;
+  display: inline-block;
+}
 
 .forNavbar {
-  background-color: none;
+  background-color: rgb(253, 230, 234);
+  border-radius: 15px;
 }
 
 .navbarBox {
@@ -28,32 +33,33 @@ body {
   box-shadow: 0px 5px 30px rgb(235, 235, 235);
   border-radius: 15px;
 }
-
+/* nav{
+  background-color: yellowgreen;
+} */
 #lnk {
   font-weight: lighter;
-  color: brown;
+  color: rgb(73, 29, 29);
   font-size: 30px;
   text-decoration: none;
 }
 
 #lnk:hover {
-  font-weight: lighter;
+  font-weight:bold;
   color: blue;
   text-decoration: none;
 }
-
-#lnk:visited {
-  color: red;
-}
-
+/* #lnk:visited {
+  color: yellowgreen;
+} */
 #lnk:active {
-  color: black;
+  color: green;
 }
 
 .navbar {
   text-align: center;
   min-width: 80rem;
   vertical-align: text-top;
+  display: inline-block;
 }
 
 .mainbox {
@@ -73,6 +79,7 @@ h1 {
   color: brown;
   text-shadow: 0px -3px 8px orangered;
 }
+
 #homPic {
   width: 500px;
   height: 350px;
@@ -96,11 +103,12 @@ h1 {
 }
 
 #miniPicsBox {
-  height: 15rem;
+  height: 12rem;
 }
 
 #miniPics {
-  width: 10rem;
+  width: 11rem;
+  height: 9rem;
   cursor: pointer;
   border-radius: 15px;
   box-shadow: 10px 10px 20px #ccc;
@@ -194,6 +202,14 @@ h1 {
   background-color: rgb(201, 0, 0);
   box-shadow: 0px 5px 30px rgb(201, 61, 61);
 }
+.box {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  padding: 20px;
+  background: #eee;
+  box-sizing: border-box;
+ }
 
 #addCartButton {
   color: brown;
@@ -222,7 +238,7 @@ h1 {
   color: brown;
   font-size: xx-large;
   font-family: 'Beau Rivage';
-  margin-right: 52%;
+
   margin-bottom: 3%;
   box-shadow: 0px 5px 30px #ccc;
 }
@@ -269,13 +285,12 @@ h1 {
 #orderButton {
   color: brown;
   text-align: center;
-  width: 60%;
   height: 50px;
+  width: 75rem;
   font-weight: bold;
   font-size: xx-large;
   font-family: 'Beau Rivage';
   margin-top: 3%;
-  margin-left: 20%;
   background-color: rgba(248, 248, 39, 0.712);
   border: none;
   border-radius: 10px;
@@ -347,15 +362,22 @@ h1 {
   background-color: rgb(42, 165, 52);
   box-shadow: 0px 5px 30px rgb(66, 201, 61);
 }
-form{
+
+form {
+  text-align: center;
+  display: inline-block;
   border: solid brown 1px;
   border-radius: 20px;
   padding-top: 3rem;
   width: 50rem;
-  margin-left: 34%;
+  margin-top: 2%;
 }
+
 #orderHeader{
   margin-top: 5%;
   color: rgb(0, 168, 0);
   font-weight: bolder;
+}
+#errorMessage {
+  color: red;
 }

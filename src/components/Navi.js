@@ -13,15 +13,16 @@ function Navi(props) {
             style={{ marginBottom: "3rem", marginTop: "1rem", borderRadius: "5px" }}
         >
             <div className="row forNavbar">
-                <Navbar className="navbarBox" bg="light" variant="light">
-                    <Container  style={{ marginBottom: "2rem", marginTop: "2rem", borderRadius: "5px"}}>
+                <Navbar className="navbarBox">
+                {/* className="navbarBox" bg="light" variant="light" */}
+                    <Container style={{ marginBottom: "2rem", marginTop: "2rem", borderRadius: "5px"}}>
                         <Navbar.Collapse className="navbar">
-                            <NavLink to="/"><Navbar.Brand id="lnk">Home</Navbar.Brand></NavLink>
-                            <NavLink to="/womensaccessories" onClick={()=>props.selectMainCat(0)}><Navbar.Brand id="lnk">Women's Accesories</Navbar.Brand></NavLink>
-                            <NavLink to="/mensaccessories" onClick={()=>props.selectMainCat(1)}><Navbar.Brand id="lnk">Men's Accesories</Navbar.Brand></NavLink>
-                            <NavLink to="/favorite"><Navbar.Brand id="lnk">{"\u2764"}Favorite{"\u2764"}</Navbar.Brand></NavLink>
-                            <NavLink to="/user"><Navbar.Brand id="lnk">Hello, {(props.loginStatus) ? (props.loginForm.username) : ("Sign in")} </Navbar.Brand></NavLink>
-                            <NavLink to="/cart"><Navbar.Brand id="lnk">Cart{"\uD83D\uDED2"} ({props.cart.length})</Navbar.Brand></NavLink>
+                            <NavLink id="lnk" to="/">Home</NavLink>
+                            <NavLink id="lnk" to="/womensaccessories" onClick={()=>props.selectMainCat(0)}> Women's Accesorie</NavLink>
+                            <NavLink id="lnk" to="/mensaccessories" onClick={()=>props.selectMainCat(1)}> Men's Accesories</NavLink>
+                            <NavLink id="lnk" to="/favorite">{"\u2764"}Favorite{"\u2764"}</NavLink>
+                            <NavLink id="lnk" to="/user">Hello, {(props.loginStatus) ? (props.loginForm.username) : ("Sign in")}</NavLink>
+                            <NavLink id="lnk" to="/cart">Cart{"\uD83D\uDED2"} ({props.cart.length})</NavLink>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

@@ -25,7 +25,7 @@ function WomensAccessories(props) {
                                                         props.setDetails(value)
                                                         navigate("/product")
                                                     }}>
-                                                        <img src={value.Pic} id='miniPics'></img>
+                                                        <img src={value.Pic} id='miniPics' alt={value.Pic}></img>
                                                     </div>
                                                 )
                                             }

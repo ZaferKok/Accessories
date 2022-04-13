@@ -79,6 +79,13 @@ const mapDispatchToProps = (dispatch) => {
             })
         },
 
+        resetCart: (cart) => {
+            dispatch({
+                type: "RESET_CART",
+                payload: cart
+            })
+        },
+
         removeFromCart: (index) => {
             dispatch({
                 type: "REMOVE_FROM_CART",
@@ -133,6 +140,12 @@ const mapDispatchToProps = (dispatch) => {
         //         payload: value
         //     })
         // }
+        setMessage: (message) => {
+            dispatch({
+                type: "SET_MESSAGE",
+                payload: message
+            })
+        },
     }
 }
 

@@ -10,8 +10,8 @@ function Home(props) {
 
     return (
         <div>
-            <div className='container mt-5'>
-                <div className='row'>
+            <div className='container mt-5' style={{display:"inline-block", textAlign:"center"}}>
+                <div className='row' >
                     <div className='col-6 mt-5'>
                         <Link to='/womensaccessories'>
                             <div onClick={() => props.selectMainCat(0)}>

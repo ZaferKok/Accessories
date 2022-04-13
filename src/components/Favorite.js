@@ -11,7 +11,14 @@ function Favorite(props) {
     return (
         <div>
             <h4>Favorite List</h4><br></br><br></br><br></br>
-            <button id='cartBackButton' onClick={() => { navigate(-1) }}>{"\u21DA"}Back</button>
+            {
+                props.favorite.length == 0 &&
+                <>
+                <h2 style={{color:"blueviolet"}}>I guess you don't like something easily!</h2>
+                <img src='./images/favori.jpg' alt='baby' height='400px' style={{borderRadius:"50px"}}></img>
+                </>
+                
+            }
             {
                 props.favorite.map((value, index) => {
                     return (
@@ -21,7 +28,7 @@ function Favorite(props) {
                                     <div onClick={() => {
                                         props.setDetails(value)
                                         navigate("/product")
-                                    }}><img id='miniFavPics' src={value.Pic} />
+                                    }}><img id='miniFavPics' src={value.Pic} alt={value} />
                                     </div>
                                     {/* onClick={navigate("/product")} */}
                                     <p id='productFavTitle'>{value.Title}</p>

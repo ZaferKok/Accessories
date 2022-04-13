@@ -12,12 +12,13 @@ const initState = {
     users: [],
     loginStatus: false,
     counter: [{ id: "", count: 0 }],
-    account:{
-        creditCard: "",
-        name: "",
-        address: "",
-        telefon: ""
-    }
+    // account:{
+    //     creditCard: "",
+    //     name: "",
+    //     address: "",
+    //     telefon: ""
+    // },
+    message: ""
 }
 
 const reducer = (state = initState, action) => {
@@ -56,14 +57,30 @@ const reducer = (state = initState, action) => {
                 detailselection: action.payload
             }
         case "ADD_TO_CART":
-            return {
-                ...state,
-                cart: [...state.cart, action.payload]
+            const findProduct = state.cart.filter((value, index) => {
+                return value.id == state.detailselection.id
+            })
+            console.log(findProduct);
+            if (!findProduct.length) {
+                return {
+                    ...state,
+                    cart: [...state.cart, action.payload]
+                }
+            } else {
+                return {
+                    ...state,
+                    cart: [...state.cart]
+                }
             }
         case "SET_CART":
             return {
                 ...state,
                 cart: action.payload
+            }
+        case "RESET_CART":
+            return {
+                ...state,
+                cart: []
             }
         case "REMOVE_FROM_CART":
             const newArray1 = state.cart.filter((value, index) => {
@@ -74,9 +91,19 @@ const reducer = (state = initState, action) => {
                 cart: newArray1
             }
         case "ADD_TO_FAVORITE":
-            return {
-                ...state,
-                favorite: [...state.favorite, action.payload]
+            const findFavProduct = state.favorite.filter((value, index) => {
+                return value.id == state.detailselection.id
+            })
+            if (!findFavProduct.length) {
+                return {
+                    ...state,
+                    favorite: [...state.favorite, action.payload]
+                }
+            } else {
+                return {
+                    ...state,
+                    favorite: [...state.favorite]
+                }
             }
         case "SET_FAVORITE":
             return {
@@ -98,15 +125,15 @@ const reducer = (state = initState, action) => {
             }
         case "PLUS_COUNTER":
             const newProduct1 = state.cart.find((product) => product.id === action.payload.id)
-            if(newProduct1.Quantity < 10) newProduct1.Quantity++
+            if (newProduct1.Quantity < 10) newProduct1.Quantity++
             return {
                 ...state,
                 cart: [...state.cart]
             }
         case "MINUS_COUNTER":
             const newProduct2 = state.cart.find((product) => product.id === action.payload.id)
-            if(newProduct2.Quantity != 1) newProduct2.Quantity--
-            
+            if (newProduct2.Quantity != 1) newProduct2.Quantity--
+
             return {
                 ...state,
                 cart: [...state.cart]
@@ -115,7 +142,13 @@ const reducer = (state = initState, action) => {
         //     return {
         //         ...state,
         //         account: action.payload
-        //     }    
+        //     }
+        case "SET_MESSAGE":
+            return {
+                ...state,
+                message: action.payload
+            }
+
         default:
             return state
     }
