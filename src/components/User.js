@@ -5,13 +5,8 @@ import mapDispatchToProps from '../redux/mapDispatchToProps';
 
 function User(props) {
 
-    const [loginForm, setLoginForm] = useState({
-        username: "",
-        password: ""
-    })
-
     function enterForm(event) {
-        setLoginForm((currentState) => {
+        props.setLoginForm((currentState) => {
             return {
                 ...currentState,
                 [event.target.name]: event.target.value
@@ -21,8 +16,8 @@ function User(props) {
 
     function logIn() {
         const user = props.users.find((value) => {
-            return value.username === loginForm.username &&
-                value.password === loginForm.password
+            return value.username === props.loginForm.username &&
+                value.password === props.loginForm.password
         })
         if (user) {
             props.setLoginStatus(true)
@@ -37,7 +32,7 @@ function User(props) {
 
     return props.loginStatus ?
         (<>
-            <h2 id='loginHeader'>Welcome Mr/Mrs {loginForm.username}</h2>
+            <h2 id='loginHeader'>Welcome Mr/Mrs {props.loginForm.username}</h2>
             <h3 id='loginHeader' >Now you can safely complete your shopping.</h3>
             <button id='logButton' onClick={logOut}>LOGOUT</button>
             
@@ -48,11 +43,11 @@ function User(props) {
             <form>
                 <div>
                     <label id='login'>USERNAME:</label>
-                    <input id='loginBox' type="text" name="username" value={loginForm.username} onChange={enterForm} required/>
+                    <input id='loginBox' type="text" name="username" value={props.loginForm.username} onChange={enterForm} required/>
                 </div><br></br>
                 <div>
                     <label id='login'> PASSWORD:</label>
-                    <input id='loginBox' type="password" name="password" value={loginForm.password} onChange={enterForm} required/>
+                    <input id='loginBox' type="password" name="password" value={props.loginForm.password} onChange={enterForm} required/>
                 </div><br></br>
                 <div>
                     <button id='logButton' type="button" onClick={logIn}>LOGIN</button>

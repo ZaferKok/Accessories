@@ -20,7 +20,7 @@ function Navi(props) {
                             <NavLink to="/womensaccessories" onClick={()=>props.selectMainCat(0)}><Navbar.Brand id="lnk">Women's Accesories</Navbar.Brand></NavLink>
                             <NavLink to="/mensaccessories" onClick={()=>props.selectMainCat(1)}><Navbar.Brand id="lnk">Men's Accesories</Navbar.Brand></NavLink>
                             <NavLink to="/favorite"><Navbar.Brand id="lnk">{"\u2764"}Favorite{"\u2764"}</Navbar.Brand></NavLink>
-                            <NavLink to="/user"><Navbar.Brand id="lnk">Hello, {(props.loginStatus) ? ("ZAFER") : ("Sign in")} </Navbar.Brand></NavLink>
+                            <NavLink to="/user"><Navbar.Brand id="lnk">Hello, {(props.loginStatus) ? (props.loginForm.username) : ("Sign in")} </Navbar.Brand></NavLink>
                             <NavLink to="/cart"><Navbar.Brand id="lnk">Cart{"\uD83D\uDED2"} ({props.cart.length})</Navbar.Brand></NavLink>
                         </Navbar.Collapse>
                     </Container>

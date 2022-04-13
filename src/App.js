@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import mapStateToProps from './redux/mapStateToProps';
 import mapDispatchToProps from './redux/mapDispatchToProps';
@@ -16,9 +16,16 @@ import Product from './components/Product';
 
 
 function App(props) {
+
   <script
     src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-    crossorigin></script>
+    crossorigin>
+  </script>
+
+  const [loginForm, setLoginForm] = useState({
+    username: "",
+    password: ""
+  })
 
   // After Initialization
   useEffect(() => {
@@ -61,7 +68,7 @@ function App(props) {
 
   return (
     <div className='mainbox'>
-      <Navi />
+      <Navi loginForm={loginForm} />
       <header><h1>...ACCESSORIES...</h1></header>
       <main>
         <Routes>
@@ -70,7 +77,7 @@ function App(props) {
           <Route path='/mensaccessories' element={(<Accessories />)} />
           <Route path='/cart' element={(<Cart />)} />
           <Route path='/favorite' element={(<Favorite />)} />
-          <Route path='/user' element={(<User />)} />
+          <Route path='/user' element={(<User loginForm={loginForm} setLoginForm={setLoginForm} />)} />
           <Route path='/product' element={(<Product />)} />
         </Routes>
       </main>

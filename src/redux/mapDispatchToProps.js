@@ -111,21 +111,19 @@ const mapDispatchToProps = (dispatch) => {
             })
         },
 
-        // setUsers: (user) => {
-        //     console.log(user);
-        //     dispatch({
-        //         type: "SET_USERS",
-        //         payload: user
-        //     })
-        // },
-        // plusCounter: (value) => {
-        //     dispatch({
-        //         type: "PLUS_COUNTER",
-        //         payload: value
-        //     })
-        // },
+        plusCounter: (value) => {
+            dispatch({
+                type: "PLUS_COUNTER",
+                payload: value
+            })
+        },
 
-
+        minusCounter: (value) => {
+            dispatch({
+                type: "MINUS_COUNTER",
+                payload: value
+            })
+        },
 
 
 

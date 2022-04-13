@@ -8,15 +8,6 @@ function Cart(props) {
 
     const navigate = useNavigate()
 
-    // function totalAmount(price){
-    //     let summe = 0
-    //     for(int i= ){
-
-    //     }
-    //     return 
-
-    // }
-
     return (
         <div>
             <h4>Shopping Summary</h4><br></br><br></br><br></br>
@@ -37,13 +28,13 @@ function Cart(props) {
                                     <p id='productCartTitle'>{value.Title}</p>
                                 </div>
                                 <div className='col'>
-                                    <p id='productCartPrice'>{value.Price} €</p>
+                                    <p id='productCartPrice'>{(value.Price * value.Quantity).toFixed(2)} €</p>
                                 </div>
                                 <div className='col'>
-                                    <button id='counter'>-</button>
-                                    <button id='counter'>({props.cart[0].Quantity})</button>
-                                    <button id='counter' >+</button>
-                                    {/* onClick={()=> props.plusCounter(value)} */}
+                                    <button id='counter' onClick={()=> props.minusCounter(value)}>-</button>
+                                    <button id='counter'>({value.Quantity})</button>
+                                    <button id='counter' onClick={()=> props.plusCounter(value)}>+</button>
+                                    
                                 </div>
                                 <div className='col'>
                                     <button id='delButton' onClick={() => { props.removeFromCart(index) }}>DELETE</button>
@@ -59,7 +50,7 @@ function Cart(props) {
                         <label >Total amount: <br></br>
                             <p id='total'>
                                 {
-                                    (props.cart.map(value => value.Price).reduce((prev, next) => prev + next)).toFixed(2)
+                                    (props.cart.map(value => (value.Price * value.Quantity)).reduce((prev, next) => prev + next)).toFixed(2)
                                 }
                                 €
                             </p>

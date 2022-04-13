@@ -100,41 +100,22 @@ const reducer = (state = initState, action) => {
                 loginStatus: action.payload
             }
 
-        // case "SET_USERS":
-        //     console.log(state.users);
-        //     return {
-        //         ...state,
-        //         users: action.payload
-        //     }
-        // case "PLUS_COUNTER":
-        //     console.log(state.counter.id);
-        //     console.log(state.counter.count);
-        //     console.log(state.cart.Quantity);
+        case "PLUS_COUNTER":
+            const newProduct1 = state.cart.find((product) => product.id === action.payload.id)
+            if(newProduct1.Quantity < 10) newProduct1.Quantity++
+            return {
+                ...state,
+                cart: [...state.cart]
+            }
 
-        //     if (state.cart.find((product) => product.id === action.payload.id)) {
-        //         return {
-        //             ...state,
-        //             cart: [...state.cart, (action.payload.Quantity + 1)]
-        //         }
-        //     }
-        // state.categories.find((item) => item.id === Number(categoryId)).
-
-
-        // case "PLUS_COUNTER":
-        //     console.log(state.counter.id);
-        //     console.log(state.counter.count);
-        //     return {
-        // const relatedProduct = state.cart.filter((value) => {
-        //     return action.payload == value.id
-        // })
-        // return {
-        //     ...state,
-        //     counter:{
-        //                 ...state.counter,
-        //                 id:     relatedProduct.id, 
-        //                 count:  state.count + 1
-        //             }
-        // }
+        case "MINUS_COUNTER":
+            const newProduct2 = state.cart.find((product) => product.id === action.payload.id)
+            if(newProduct2.Quantity != 1) newProduct2.Quantity--
+            
+            return {
+                ...state,
+                cart: [...state.cart]
+            }
 
         default:
             return state
