@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import mapStateToProps from '../redux/mapStateToProps';
 import mapDispatchToProps from '../redux/mapDispatchToProps';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { Button } from './styles/Button.styled';
 
 function Cart(props) {
 
@@ -58,7 +59,7 @@ function Cart(props) {
                                 </p>
                             </label>
                             <div className='row' style={{ textAlign: "center" }}>
-                                <button id='orderButton' type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</button>
+                                <Button  type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</Button>
                             </div>
                         </>
                     }

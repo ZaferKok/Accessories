@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import mapStateToProps from '../redux/mapStateToProps';
 import mapDispatchToProps from '../redux/mapDispatchToProps';
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
+
 
 function User(props) {
-
+    
     // const [message, setMessage] = useState("");
 
     const navigate = useNavigate()
@@ -27,14 +29,30 @@ function User(props) {
 
     function logIn() {
         const user = props.users.find((value) => {
-            return value.username === props.loginForm.username &&
-                value.password === props.loginForm.password
+            return  value.username === props.loginForm.username &&
+                    value.password === props.loginForm.password
         })
         if (user) {
             props.setMessage("")
             props.setLoginStatus(true)
+            Swal.fire({
+                title: 'Please enter your data below to complete ORDER!',
+                showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+                }
+              })
+
         } else {
             props.setMessage("Invalid username or password!")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="">Why do I have this issue?</a>'
+              })
             props.setLoginStatus(false)
         }
     }
@@ -100,6 +118,7 @@ function User(props) {
                         <div>{message}</div>
                     } */}
                         <h4 id='errorMessage'>{props.message}</h4>
+                        
                         <br>
                         </br>
                         <button id='logButton' type="submit" onClick={logIn}>LOGIN</button>

@@ -4,8 +4,16 @@ import { NavLink } from "react-router-dom";
 import { connect } from 'react-redux';
 import mapStateToProps from '../redux/mapStateToProps';
 import mapDispatchToProps from '../redux/mapDispatchToProps';
+import Swal from 'sweetalert2';
 
 function Order(props) {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your items on the way!',
+        showConfirmButton: false,
+        timer: 2500
+      })
     return (
         <div className="container">
             <div className="row">
