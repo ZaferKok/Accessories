@@ -17,7 +17,6 @@ function Favorite(props) {
                 <h2 style={{color:"blueviolet"}}>I guess you don't like something easily!</h2>
                 <img src='./images/favori.jpg' alt='baby' height='400px' style={{borderRadius:"50px"}}></img>
                 </>
-                
             }
             {
                 props.favorite.map((value, index) => {
@@ -30,7 +29,6 @@ function Favorite(props) {
                                         navigate("/product")
                                     }}><img id='miniFavPics' src={value.Pic} alt={value} />
                                     </div>
-                                    {/* onClick={navigate("/product")} */}
                                     <p id='productFavTitle'>{value.Title}</p>
                                     <button id='favButton' onClick={() => { props.removeFromFavorite(index) }}>{"\u2764"}</button>
                                 </div>

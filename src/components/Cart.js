@@ -58,8 +58,8 @@ function Cart(props) {
                                     €
                                 </p>
                             </label>
-                            <div className='row' style={{ textAlign: "center" }}>
-                                <Button  type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</Button>
+                            <div className='row' style={{ textAlign: "center", marginRight:"10%" }}>
+                                <Button type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</Button>
                             </div>
                         </>
                     }

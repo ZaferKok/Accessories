@@ -17,11 +17,6 @@ import Product from './components/Product';
 
 function App(props) {
 
-  // <script
-  //   src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-  //   crossorigin>
-  // </script>
-
   const [loginForm, setLoginForm] = useState({
     username: "",
     password: "",
