@@ -75,7 +75,7 @@ function User(props) {
             <div id='clientInfo1' className='row'>
                 <div className='col'>
                     <div><label>Credit Card Number:</label></div>
-                    <input type="text" class="form-control" placeholder = "1234 5678 9101 1213" name="credit" value={props.loginForm.credit} onChange={enterForm} required></input>
+                    <input type="text" class="form-control" placeholder = "1111 2222 3333 4444" name="credit" value={props.loginForm.credit} onChange={enterForm} required></input>
                 </div>
                 <div className='col'>
                     <div><label>Firstname and Lastname:</label></div>
