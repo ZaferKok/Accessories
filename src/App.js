@@ -71,14 +71,14 @@ function App(props) {
       <header><h1>...ACCESSORIES...</h1></header>
       <main>
         <Routes>
-          <Route path="/" element={(<Home />)} />
-          <Route path='/womensaccessories' element={(<Accessories />)} />
-          <Route path='/mensaccessories' element={(<Accessories />)} />
-          <Route path='/cart' element={(<Cart />)} />
-          <Route path='/favorite' element={(<Favorite />)} />
-          <Route path='/user' element={(<User loginForm={loginForm} setLoginForm={setLoginForm} />)} />
-          <Route path='/product' element={(<Product />)} />
-          <Route path="/order" element={(<Order loginForm={loginForm} />)} />
+          <Route path="/Accessories/" element={(<Home />)} />
+          <Route path='/Accessories/womensaccessories' element={(<Accessories />)} />
+          <Route path='/Accessories/mensaccessories' element={(<Accessories />)} />
+          <Route path='/Accessories/cart' element={(<Cart />)} />
+          <Route path='/Accessories/favorite' element={(<Favorite />)} />
+          <Route path='/Accessories/user' element={(<User loginForm={loginForm} setLoginForm={setLoginForm} />)} />
+          <Route path='/Accessories/product' element={(<Product />)} />
+          <Route path="/Accessories/order" element={(<Order loginForm={loginForm} />)} />
         </Routes>
       </main>
     </div>

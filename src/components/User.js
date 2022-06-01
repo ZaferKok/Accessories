@@ -59,7 +59,7 @@ function User(props) {
 
     function checkAccount() {
         if (props.loginForm.credit && props.loginForm.name && props.loginForm.address && props.loginForm.telefon) {
-            navigate("/cart")
+            navigate("/Accessories/cart")
         }
     }
 

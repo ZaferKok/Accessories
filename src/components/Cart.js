@@ -59,14 +59,14 @@ function Cart(props) {
                                 </p>
                             </label>
                             <div className='row' style={{ textAlign: "center", marginRight:"10%" }}>
-                                <Button type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/order")) : navigate("/user")}>ORDER</Button>
+                                <Button type='submit' onClick={() => props.loginStatus ? (props.resetCart(null), navigate("/Accessories/order")) : navigate("/Accessories/user")}>ORDER</Button>
                             </div>
                         </>
                     }
                     {props.cart.length == 0 &&
                         <>
                             <h3 style={{ color: "blueviolet", fontWeight: 'bolder' }}>There is nothing here!</h3>
-                            <img src='./images/cart.jpg' alt='emoji' height='300px'></img>
+                            <img src='.images/cart.jpg' alt='emoji' height='300px'></img>
                         </>
                     }
                 </div>

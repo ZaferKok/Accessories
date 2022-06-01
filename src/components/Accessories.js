@@ -23,7 +23,7 @@ function WomensAccessories(props) {
                                                 return (
                                                     <div id='miniPicsBox' onClick={() => {
                                                         props.setDetails(value)
-                                                        navigate("/product")
+                                                        navigate("/Accessories/product")
                                                     }}>
                                                         <img src={value.Pic} id='miniPics' alt={value.Pic}></img>
                                                     </div>

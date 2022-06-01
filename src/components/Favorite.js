@@ -26,7 +26,7 @@ function Favorite(props) {
                                 <div className='col'>
                                     <div onClick={() => {
                                         props.setDetails(value)
-                                        navigate("/product")
+                                        navigate("/Accessories/product")
                                     }}><img id='miniFavPics' src={value.Pic} alt={value} />
                                     </div>
                                     <p id='productFavTitle'>{value.Title}</p>
