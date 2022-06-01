@@ -81,6 +81,7 @@ function App(props) {
           <Route path="/Accessories/order" element={(<Order loginForm={loginForm} />)} />
         </Routes>
       </main>
+      <footer><h4 style={{marginTop:"14Rem"}}>Copyright © 2022 Zafer Kök. All Rights Reserved</h4></footer>
     </div>
   );
 }
