@@ -79,17 +79,17 @@ function User(props) {
                 </div>
                 <div className='col'>
                     <div><label>Firstname and Lastname:</label></div>
-                    <input type="text" class="form-control" name="name" value={props.loginForm.name} onChange={enterForm} required></input>
+                    <input type="text" class="form-control" placeholder = "Zafer Kök" name="name" value={props.loginForm.name} onChange={enterForm} required></input>
                 </div>
             </div>
             <div id='clientInfo2' className='row'>
                 <div className='col'>
                     <div><label>Address:</label></div>
-                    <input type="text" class="form-control" name="address" value={props.loginForm.address} onChange={enterForm} required></input>
+                    <input type="text" class="form-control" placeholder = "79194 Gundelfingen" name="address" value={props.loginForm.address} onChange={enterForm} required></input>
                 </div>
                 <div className='col'>
                     <div><label>Phone number:</label></div>
-                    <input type="text" class="form-control" name="telefon" value={props.loginForm.telefon} onChange={enterForm} required></input>
+                    <input type="text" class="form-control" placeholder = "0176 5573 8032" name="telefon" value={props.loginForm.telefon} onChange={enterForm} required></input>
                 </div>
             </div>
             <button id='saveButton' type="submit" onClick={checkAccount}>SAVE</button>
