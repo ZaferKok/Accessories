@@ -23,7 +23,7 @@ function Cart(props) {
                                 <div className='col'>
                                     <div onClick={() => {
                                         props.setDetails(value)
-                                        navigate("/product")
+                                        navigate("/Accessories/product")
                                     }}><img id='miniCartPics' src={value.Pic} alt={value.Pic} />
                                     </div>
                                 </div>
