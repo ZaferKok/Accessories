@@ -75,7 +75,7 @@ function User(props) {
             <div id='clientInfo1' className='row'>
                 <div className='col'>
                     <div><label>Credit Card Number:</label></div>
-                    <input type="text" class="form-control" name="credit" value={props.loginForm.credit} onChange={enterForm} required></input>
+                    <input type="text" class="form-control" placeholder = "1234 5678 9101 1213" name="credit" value={props.loginForm.credit} onChange={enterForm} required></input>
                 </div>
                 <div className='col'>
                     <div><label>Firstname and Lastname:</label></div>
@@ -103,11 +103,11 @@ function User(props) {
 
                     <div>
                         <label id='login'>USERNAME:</label>
-                        <input id='loginBox' type="text" name="username" value={props.loginForm.username} onChange={enterForm} required />
+                        <input id='loginBox' type="text" placeholder = "AVATAR" name="username" value={props.loginForm.username} onChange={enterForm} required />
                     </div><br></br>
                     <div>
                         <label id='login'> PASSWORD:</label>
-                        <input id='loginBox' type="password" name="password" value={props.loginForm.password} onChange={enterForm} required />
+                        <input id='loginBox' type="password" name="password" placeholder = "12345" value={props.loginForm.password} onChange={enterForm} required />
                     </div><br></br>
                     <div>
                         {/* {
