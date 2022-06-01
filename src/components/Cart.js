@@ -66,7 +66,7 @@ function Cart(props) {
                     {props.cart.length == 0 &&
                         <>
                             <h3 style={{ color: "blueviolet", fontWeight: 'bolder' }}>There is nothing here!</h3>
-                            <img src='.images/cart.jpg' alt='emoji' height='300px'></img>
+                            <img src='./images/cart.jpg' alt='emoji' height='300px'></img>
                         </>
                     }
                 </div>
