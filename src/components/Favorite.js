@@ -31,6 +31,7 @@ function Favorite(props) {
                                     </div>
                                     <p id='productFavTitle'>{value.Title}</p>
                                     <button id='favButton' onClick={() => { props.removeFromFavorite(index) }}>{"\u2764"}</button>
+                                    <p style={{fontWeight:"bold", marginBottom: "5Rem"}}>Click to Remove</p>
                                 </div>
                             </div>
                         </div>
